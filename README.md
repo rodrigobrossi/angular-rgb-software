@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## About the RGB Application
+
+It is a study guide based on the Tour of Heroes from Angular. 
+
+The application intent to control a list of clients and products and intend to export contracts through a PDF file based on a HTML Template. 
+
+The applications solve the problem for a neighbor that waht's to have a different control then a Excel spreadshit over his business. 
