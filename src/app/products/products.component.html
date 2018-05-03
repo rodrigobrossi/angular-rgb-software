@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
+
 <h2>Product Details List</h2>
 <ul class="products">
   <li *ngFor="let product of products" (click)="onSelect(product)" 
@@ -12,20 +9,12 @@
 </ul>
 
 <app-product-detail [product]="selectedProduct"></app-product-detail>
-<<<<<<< HEAD
-  
-=======
 <h2>{{ product.name | uppercase }} Details</h2>
-<div><span>id: </span>{{product.id}}</div>
-<div><span>name: </span>{{product.name}}</div>
-<div><span>Unit price: </span>{{product.value}} US$</div>
 
-<div>
-  <label>name:
-    <input [(ngModel)]="product.name" placeholder="name">
-  </label>
-</div>
->>>>>>> 4e0d37a... Initial Version
-=======
-  
->>>>>>> master
+<h2>Product Details</h2>
+
+<ul class="products">
+  <li *ngFor="let product of products">
+    <span class="badge">{{product.id}}</span> {{product.name}} : {{product.value}}
+  </li>
+</ul>
