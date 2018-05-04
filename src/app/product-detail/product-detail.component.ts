@@ -8,8 +8,11 @@ import { Product } from '../product';
 })
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 15f4388... Component Test
 export class ProductDetailComponent implements OnInit {
 
   //Binding the product
