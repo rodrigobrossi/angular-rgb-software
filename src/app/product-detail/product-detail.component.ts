@@ -8,8 +8,16 @@ import { Product } from '../product';
 })
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 15f4388... Component Test
+=======
+
+
+>>>>>>> 71b59fe... Fix routing module
 export class ProductDetailComponent implements OnInit {
 
   //Binding the product
