@@ -18,6 +18,12 @@ export class ProductsComponent implements OnInit {
   //   value: 5.4
   // };
 
+  selectedProduct: Product; 
+
+  onSelect(product: Product): void {
+   this.selectedProduct = product;
+  }
+
   constructor() { }
 
   ngOnInit() {
