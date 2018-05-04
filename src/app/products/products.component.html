@@ -1,16 +1,3 @@
-<!--h2>{{ product.name | uppercase }} Details</h2>
-<div><span>id: </span>{{product.id}}</div>
-<div><span>name: </span>{{product.name}}</div>
-<div><span>Unit price: </span>{{product.value}} US$</div 
-
-<div>
-  <label>name:
-    <input [(ngModel)]="product.name" placeholder="name">
-  </label 
-
-</div>-->
-
-
 <h2>Product Details List</h2>
 <ul class="products">
   <li *ngFor="let product of products" (click)="onSelect(product)" 
@@ -20,22 +7,5 @@
   </li>
 </ul>
 
-<h2>Selected Product </h2>
+<app-product-detail [product]="selectedProduct"></app-product-detail>
   
-<div *ngIf="selectedProduct">
-
-    <h2>{{ selectedProduct.name | uppercase }} Details</h2>
-    <div><span>id: </span>{{selectedProduct.id}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="selectedProduct.name" placeholder="name">
-      </label>
-      <label>Value:
-        <input [(ngModel)]="selectedProduct.value" placeholder="value">
-      </label>
-      <label>Qtt:
-          <input [(ngModel)]="selectedProduct.qtt" placeholder="qtt">
-        </label>
-    </div>
-  
-  </div>
