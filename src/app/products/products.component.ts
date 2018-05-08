@@ -40,9 +40,11 @@ export class ProductsComponent implements OnInit {
 
   /**
    * Returns Products from ProductServices
+   * This method calls an observable to notify asynchronous the subriscribed objects. 
    */
   getProducts(): void {
-    this.products = this.productService.getProducts();
+    this.productService.getProducts()
+    .subscribe(products => this.products = products);  
   }
 
 }
