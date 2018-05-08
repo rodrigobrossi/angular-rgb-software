@@ -22,6 +22,6 @@ export class ProductService {
     reader.readAsText(file);
   };
 
-  constructor(private productService : ProductService) { }
+  constructor() { }
 
 }
