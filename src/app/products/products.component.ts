@@ -3,7 +3,6 @@ import { Product } from '../product';
 //import { PRODUCTS } from '../mock-products';
 import { ProductService} from '../product.service';
 
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
