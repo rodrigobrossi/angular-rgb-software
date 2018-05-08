@@ -26,6 +26,7 @@ export class ProductsComponent implements OnInit {
 
   onSelect(product: Product): void {
    this.selectedProduct = product;
+   this.productService.addProduct(product);
   }
 
   constructor(private productService : ProductService) { }

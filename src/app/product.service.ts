@@ -32,4 +32,8 @@ export class ProductService {
 
   constructor(private messageService: MessageService) { }
 
+  addProduct(product: Product){
+    this.messageService.add(product.name);
+  }
+
 }
