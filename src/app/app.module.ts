@@ -5,7 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
-import { ProductDetailComponent } from './product-detail/product-detail.component'; // -- NgModel lives here ---
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ClientService } from './client.service'; // -- NgModel lives here ---
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

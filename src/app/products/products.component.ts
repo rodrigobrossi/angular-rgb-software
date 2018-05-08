@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
-import { PRODUCTS } from '../mock-products'
+//import { PRODUCTS } from '../mock-products';
+import { ProductService} from '../product.service';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +10,10 @@ import { PRODUCTS } from '../mock-products'
 })
 export class ProductsComponent implements OnInit {
 
-  products = PRODUCTS;
+  /** Removed from previous elements */
+  //products = PRODUCTS;
+
+  products: Product[]; //Injectable reference assingened to the service.
 
   //creating a product hard coded
   // product : Product = {
@@ -24,11 +28,21 @@ export class ProductsComponent implements OnInit {
    this.selectedProduct = product;
   }
 
-  constructor() { }
+  constructor(private productService : ProductService) { }
 
+  /**
+   * Angular state machine - OnInit 
+   */
   ngOnInit() {
     console.log("Test of a component logic");
-    
+    this.getProducts();
+  }
+
+  /**
+   * Returns Products from ProductServices
+   */
+  getProducts(): void {
+    this.products = this.productService.getProducts();
   }
 
 }
