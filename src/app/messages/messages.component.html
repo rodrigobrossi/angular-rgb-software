@@ -3,6 +3,24 @@
     <h2>Messages</h2>
     <button class="clear"
             (click)="messageService.clear()">clear</button>
-    <div *ngFor='let message of messageService.messages'> {{message}} </div>
-  
+    <div *ngFor='let message of messageService.messages'> {{message.name}} 
+      <table>
+        <tr>
+          <td>
+              <input [(ngModel)]="message.name" placeholder="name">
+          </td>
+          <td>
+              <input [(ngModel)]="message.id" placeholder="id">
+          </td>
+          <td>
+              <input [(ngModel)]="message.value" placeholder="value">
+          </td>
+          <td>
+              <input [(ngModel)]="message.qtt" placeholder="qtt">
+          </td>          
+        </tr>
+      </table>
+        </div>
+      
+    
   </div>

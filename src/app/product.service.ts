@@ -17,7 +17,7 @@ export class ProductService {
 
   getProducts(): Observable<Product[]>{
     //TODO: send the message _after_ fetching the heroes. 
-    this.messageService.add('Product Service: fetched heroes');
+    //this.messageService.add();
     return of(PRODUCTS);
   }
 
@@ -33,7 +33,7 @@ export class ProductService {
   constructor(private messageService: MessageService) { }
 
   addProduct(product: Product){
-    this.messageService.add(product.name);
+    this.messageService.add(product);
   }
 
 }
