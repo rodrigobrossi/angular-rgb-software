@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Product } from './product'
 =======
 >>>>>>> 291eaf2... Add message cache
+=======
+import { Product } from './product'
+>>>>>>> 269338c... Add Service
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   products: Product[] = [];
 
@@ -22,9 +27,12 @@ export class MessageService {
   
 =======
   messages: string[] = [];
+=======
+  messages: Product[] = [];
+>>>>>>> 269338c... Add Service
 
-  add(message: string){
-    this.messages.push(message);
+  add(product: Product){
+    this.messages.push(product);
   }
 
   clear(){
