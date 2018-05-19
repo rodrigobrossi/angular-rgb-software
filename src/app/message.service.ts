@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
-import { Product } from './product'
-=======
->>>>>>> 291eaf2... Add message cache
+import { Product } from './product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
 
-<<<<<<< HEAD
   products: Product[] = [];
 
   add(product: Product){
@@ -19,17 +15,6 @@ export class MessageService {
   clear(){
     this.products = [];
   }
-  
-=======
-  messages: string[] = [];
 
-  add(message: string){
-    this.messages.push(message);
-  }
-
-  clear(){
-    this.messages = [];
-  }
->>>>>>> 291eaf2... Add message cache
   constructor() { }
 }
