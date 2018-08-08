@@ -6,14 +6,15 @@ import { Product } from './product'
 })
 export class MessageService {
 
-  messages: Product[] = [];
+  products: Product[] = [];
 
   add(product: Product){
-    this.messages.push(product);
+    this.products.push(product);
   }
 
   clear(){
-    this.messages = [];
+    this.products = [];
   }
+  
   constructor() { }
 }

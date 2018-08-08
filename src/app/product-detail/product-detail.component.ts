@@ -8,6 +8,8 @@ import { Product } from '../product';
 })
 
 
+
+
 export class ProductDetailComponent implements OnInit {
 
   //Binding the product

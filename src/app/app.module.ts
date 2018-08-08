@@ -7,7 +7,9 @@ import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ClientService } from './client.service';
-import { MessagesComponent } from './messages/messages.component'; // -- NgModel lives here ---
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component'; // -- NgModel lives here ---
 
 
 @NgModule({
@@ -15,13 +17,16 @@ import { MessagesComponent } from './messages/messages.component'; // -- NgModel
     AppComponent,
     ProductsComponent,
     ProductDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ClientService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

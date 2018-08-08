@@ -5,6 +5,7 @@ import { Product } from './product';
 import { PRODUCTS } from './mock-products';
 import { MessageService} from './message.service';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -18,6 +19,11 @@ export class ProductService {
   getProducts(): Observable<Product[]>{
     //TODO: send the message _after_ fetching the heroes. 
     //this.messageService.add();
+
+    for(var i =0; i < Product.length;i++){
+      this.messageService.add(Product[i]);
+    } // Iterate over Produc array
+    
     return of(PRODUCTS);
   }
 
@@ -29,6 +35,7 @@ export class ProductService {
     };
     reader.readAsText(file);
   };
+
 
   constructor(private messageService: MessageService) { }
 
