@@ -1,0 +1,17 @@
+<div *ngIf="product">
+    <h2>Selected Product </h2>
+    <h2>{{ product.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{product.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="product.name" placeholder="name">
+      </label>
+      <label>Value:
+        <input [(ngModel)]="product.value" placeholder="value">
+      </label>
+      <label>Qtt:
+          <input [(ngModel)]="product.qtt" placeholder="qtt">
+        </label>
+    </div>
+  
+  </div>
