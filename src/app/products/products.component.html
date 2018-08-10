@@ -11,10 +11,31 @@
 <app-product-detail [product]="selectedProduct"></app-product-detail>
 <h2>{{ product.name | uppercase }} Details</h2>
 
-<h2>Product Details</h2>
-
+<h2>Product Details List</h2>
 <ul class="products">
-  <li *ngFor="let product of products">
+  <li *ngFor="let product of products" (click)="onSelect(product)" 
+  [class.selected]="product === selectedProduct"
+  >
     <span class="badge">{{product.id}}</span> {{product.name}} : {{product.value}}
   </li>
 </ul>
+
+<h2>Selected Product </h2>
+  
+<div *ngIf="selectedProduct">
+
+    <h2>{{ selectedProduct.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{selectedProduct.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedProduct.name" placeholder="name">
+      </label>
+      <label>Value:
+        <input [(ngModel)]="selectedProduct.value" placeholder="value">
+      </label>
+      <label>Qtt:
+          <input [(ngModel)]="selectedProduct.qtt" placeholder="qtt">
+        </label>
+    </div>
+  
+  </div>
