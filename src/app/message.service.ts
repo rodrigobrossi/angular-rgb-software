@@ -8,11 +8,11 @@ export class MessageService {
 
   products: Product[] = [];
 
-  add(product: Product){
+  add(product: Product) {
     this.products.push(product);
   }
 
-  clear(){
+  clear() {
     this.products = [];
   }
 

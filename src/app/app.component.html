@@ -1,24 +1,7 @@
-  <p> Fale com oadministrador em caso de algum problemas
-    <a routerLink="/products">Products</a>
-  </nav>
-  <router-outlet></router-outlet>
-  <app-messages></app-messages>
-  </div>
-<table border='0'>
-  <tr>
-
-    <td>
-        <div style="text-align:left">
-            <app-products></app-products>
-          </div>
-    </td>
-    <td>
-
-        <div style="text-align:center">
-            <app-messages></app-messages>
-            <app-dashboard></app-dashboard>
-            </div>
-    </td>
-  </tr>
-</table>
-<!-- Test -->
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a> | 
+  <a routerLink="/products">Products</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>

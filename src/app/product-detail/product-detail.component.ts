@@ -7,20 +7,8 @@ import { Product } from '../product';
   styleUrls: ['./product-detail.component.css']
 })
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 15f4388... Component Test
-=======
-
-
->>>>>>> 71b59fe... Fix routing module
 export class ProductDetailComponent implements OnInit {
 
-  //Binding the product
   @Input() product: Product;
 
   constructor() { }
