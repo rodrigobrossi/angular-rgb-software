@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
-//import { PRODUCTS } from '../mock-products';
-import { ProductService} from '../product.service';
-
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-products',
@@ -10,43 +8,31 @@ import { ProductService} from '../product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  products: Product[];
 
-  /** Removed from previous elements */
-  //products = PRODUCTS;
-
-  products: Product[]; //Injectable reference assingened to the service.
-
-  //creating a product hard coded
-  // product : Product = {
-  //   id: 1,
-  //   name: 'Iluminação Som',
-  //   value: 5.4
-  // };
-
-  selectedProduct: Product; 
+  selectedProduct: Product;
 
   onSelect(product: Product): void {
-   this.selectedProduct = product;
-   this.productService.addProduct(product);
+    this.selectedProduct = product;
+    this.productService.addProduct(product);
   }
 
-  constructor(private productService : ProductService) { }
+  constructor(private productService: ProductService) {}
 
   /**
-   * Angular state machine - OnInit 
+   * Angular state machine - OnInit
    */
   ngOnInit() {
-    console.log("Test of a component logic");
     this.getProducts();
   }
 
   /**
    * Returns Products from ProductServices
-   * This method calls an observable to notify asynchronous the subriscribed objects. 
+   * This method calls an observable to notify asynchronous the subriscribed objects.
    */
   getProducts(): void {
-    this.productService.getProducts()
-      .subscribe(products => this.products = products);  
+    this.productService
+      .getProducts()
+      .subscribe(products => (this.products = products));
   }
-
 }

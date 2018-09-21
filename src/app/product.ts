@@ -1,7 +1,6 @@
-export class Product{
-
-    id: number;
-    name: string;
-    value: number;
-    qtt: number;
+export class Product {
+  id: number;
+  name: string;
+  value: number;
+  qtt: number;
 }
